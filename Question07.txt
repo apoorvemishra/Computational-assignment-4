@@ -1,0 +1,72 @@
+Chi-Squared Test Analysis for Dice Simulation:
+
+Score :             2  3   4   5   6   7   8   9   10  11  12
+Observed Counts 1:  4  10  10  13  20  18  18  11  13  14  13
+Observed Counts 2:  3  7   11  15  19  24  21  17  13  9   5
+
+1) Compute the Expected Counts:
+   For each observed count, let N be the total number of rolls.
+   - N1 ​= ∑(Observed counts 1) = 144
+   - N2 ​= ∑(Observed counts 2) = 144
+
+  Sum  Probability  Expected Count
+  2    1/36         4
+  3    2/36         8
+  4    3/36         12
+  5    4/36         16
+  6    5/36         20
+  7    6/36         24
+  8    5/36         20
+  9    4/36         16
+  10   3/36         12
+  11   2/36         8
+  12   1/36         4
+
+
+
+2) Chi-Squared Statistic Calculation:
+  For Observed Counts 1:
+  Sum = 2:  (4 - 4)^2 / 4 = 0
+  Sum = 3:  (10 - 8)^2 / 8 = 0.5
+  Sum = 4:  (10 - 12)^2 / 12 = 0.333
+  Sum = 5:  (13 - 16)^2 / 16 = 0.5625
+  Sum = 6:  (20 - 20)^2 / 20 = 0
+  Sum = 7:  (18 - 24)^2 / 24 = 1.5
+  Sum = 8:  (18 - 20)^2 / 20 = 0.2
+  Sum = 9:  (11 - 16)^2 / 16 = 1.5625
+  Sum = 10: (13 - 12)^2 / 12 = 0.0833
+  Sum = 11: (14 - 8)^2 / 8 = 4.5
+  Sum = 12: (13 - 4)^2 / 4 = 20.25
+  Chi-Squared Statistic for Observed Counts 1: 29.4913
+
+  For Observed Counts 2:
+  Sum = 2:  (3 - 4)^2 / 4 = 0.25
+  Sum = 3:  (7 - 8)^2 / 8 = 0.125
+  Sum = 4:  (11 - 12)^2 / 12 = 0.0833
+  Sum = 5:  (15 - 16)^2 / 16 = 0.0625
+  Sum = 6:  (19 - 20)^2 / 20 = 0.05
+  Sum = 7:  (24 - 24)^2 / 24 = 0
+  Sum = 8:  (21 - 20)^2 / 20 = 0.05
+  Sum = 9:  (17 - 16)^2 / 16 = 0.0625
+  Sum = 10: (13 - 12)^2 / 12 = 0.0833
+  Sum = 11: (9 - 8)^2 / 8 = 0.125
+  Sum = 12: (5 - 4)^2 / 4 = 0.25
+  Chi-Squared Statistic for Observed Counts 2: 1.1416
+
+
+3) Determine the Degrees of Freedom and Compare with Critical Value:
+   Comparison with Critical Value:
+   Degrees of freedom (df) = 11 - 1 = 10
+   Critical value at α = 0.05: 18.31
+   
+   Labeling Based on Chi-Squared Statistic:
+   Observed Counts 1: 29.4913 > 24.72 -> not sufficiently random
+   Observed Counts 2: 1.1416 < 18.31 -> sufficiently random
+
+4) Conclusion:
+   Observed counts 1 are labeled as "not sufficiently random".
+   Observed counts 2 are labeled as "sufficiently random".
+
+***************************************************************
+
+
