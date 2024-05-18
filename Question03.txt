@@ -1,0 +1,2 @@
+For 10,000 uniform deviates, both linear congruential random number generator and np.random.rand() took 0 seconds, that is less then the least count of my computer.
+But if i increase no. of deviats to 100,000, linear congruential random number generator starts to take 0.015641 seconds, that is some small finite time, but np.random.rand() still takes 0 seconds.
